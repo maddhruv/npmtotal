@@ -1,6 +1,6 @@
 {
   "name": "npmtotal",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Find you npm download statistics",
   "main": "index.js",
   "scripts": {
