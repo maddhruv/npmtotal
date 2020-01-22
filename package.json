@@ -1,0 +1,37 @@
+{
+  "name": "npmsum",
+  "version": "0.0.0",
+  "description": "Find you npm download statistics",
+  "main": "index.js",
+  "scripts": {
+    "prepublishOnly": "npm-audit-ok && package-ok",
+    "test": "tap"
+  },
+  "bin": {
+    "npmsum": "./bin/npmsum.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maddhruv/npmsum.git"
+  },
+  "keywords": [
+    "npm",
+    "npm stats",
+    "npm download stats",
+    "npm downloads"
+  ],
+  "author": "Dhruv Jain <dhruvjainpenny@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maddhruv/npmsum/issues"
+  },
+  "homepage": "https://github.com/maddhruv/npmsum#readme",
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1",
+    "lodash": "^4.17.15"
+  },
+  "devDependencies": {
+    "prepublish-ok": "^0.5.0",
+    "tap": "^14.10.6"
+  }
+}
