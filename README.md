@@ -1,14 +1,14 @@
-# npmsum
+# npmtotal
 
 Find your npm download statistics bu author or packages, can be used as a [CLI](#cli) or [Module](#module)
 
 ## Installation
 
-`npm i npmsum -g`
+`npm i npmtotal -g`
 
 or
 
-`npm i npmsum`
+`npm i npmtotal`
 when consuming as a [module](#module)
 
 ## Usage
@@ -17,25 +17,25 @@ when consuming as a [module](#module)
 
 For npm `author`
 
-> `npx npmsum author`
+> `npx npmtotal author`
 
 and for npm `packages`
 
-> `npx npmsum package1 package2 ...`
+> `npx npmtotal package1 package2 ...`
 
 ### Module
 
 ```js
-const npmsum = require("npmsum");
+const npmtotal = require("npmtotal");
 
 // author
 (async () => {
-  console.log(await npmsum("maddhruv"));
+  console.log(await npmtotal("maddhruv"));
 })();
 
 // packages
 (async () => {
-  console.log(await npmsum(["npmsum", "post-merge-install"]));
+  console.log(await npmtotal(["npmtotal", "post-merge-install"]));
 })();
 ```
 

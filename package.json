@@ -8,11 +8,11 @@
     "test": "tap"
   },
   "bin": {
-    "npmsum": "./bin/npmsum.js"
+    "npmtotal": "./bin/npmtotal.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maddhruv/npmsum.git"
+    "url": "git+https://github.com/maddhruv/npmtotal.git"
   },
   "keywords": [
     "npm",
@@ -23,9 +23,9 @@
   "author": "Dhruv Jain <dhruvjainpenny@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/maddhruv/npmsum/issues"
+    "url": "https://github.com/maddhruv/npmtotal/issues"
   },
-  "homepage": "https://github.com/maddhruv/npmsum#readme",
+  "homepage": "https://github.com/maddhruv/npmtotal#readme",
   "dependencies": {
     "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.17.15"

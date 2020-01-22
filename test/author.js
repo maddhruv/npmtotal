@@ -1,10 +1,10 @@
 const tap = require("tap");
-const npmsum = require("..");
+const npmtotal = require("..");
 
 (async () => {
   const yesterday = new Date();
   yesterday.setDate(yesterday.getDate() - 1);
-  const stats = await npmsum("maddhruv", {
+  const stats = await npmtotal("maddhruv", {
     startDate: yesterday.toJSON().slice(0, 10)
   });
   tap.ok(stats);

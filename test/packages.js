@@ -1,10 +1,10 @@
 const tap = require("tap");
-const npmsum = require("..");
+const npmtotal = require("..");
 
 (async () => {
   const yesterday = new Date();
   yesterday.setDate(yesterday.getDate() - 1);
-  const stats = await npmsum(["npmsum", "post-merge-install"], {
+  const stats = await npmtotal(["npmtotal", "post-merge-install"], {
     startDate: yesterday.toJSON().slice(0, 10)
   });
   tap.ok(stats);

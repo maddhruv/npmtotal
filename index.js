@@ -14,14 +14,14 @@ const defaultOptions = {
 };
 
 /**
- * @function npmsum - npm download stats
+ * @function npmtotal - npm download stats
  * @param {string | array} author - author name as string or packages as array
  * @param {*} [options=defaultOptions]
  * @returns array of packages and downloads
  */
-function npmsum(key, options) {
+function npmtotal(key, options) {
   if (!key) {
-    throw new Error("`key` is a required filed for `npmsum`");
+    throw new Error("`key` is a required filed for `npmtotal`");
   }
   const { exclude, startDate, endDate } = { ...options, ...defaultOptions };
 
@@ -61,4 +61,4 @@ function npmsum(key, options) {
   });
 }
 
-module.exports = npmsum;
+module.exports = npmtotal;
