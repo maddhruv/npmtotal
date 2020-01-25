@@ -29,7 +29,8 @@
   "dependencies": {
     "cli-progress": "^3.5.0",
     "isomorphic-fetch": "^2.2.1",
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.15",
+    "yargs": "^15.1.0"
   },
   "devDependencies": {
     "prepublish-ok": "^0.5.0",

@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 const cliProgress = require("cli-progress");
+const { argv } = require("yargs").array("packages");
 const npmsum = require("..");
 
 (async () => {
@@ -8,9 +9,15 @@ const npmsum = require("..");
     cliProgress.Presets.shades_classic
   );
 
+  const key = argv.author || argv.packages;
+
+  if (!key) {
+    console.error("Please pass either author or packages field");
+    process.exit(1);
+  }
+
   pbar.start(100, 0);
-  const args = process.argv.slice(2);
-  const key = args.length === 1 ? args[0] : args;
+
   pbar.update(10);
 
   const stats = await npmsum(key);
