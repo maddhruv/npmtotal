@@ -21,7 +21,10 @@ const npmsum = require("..");
 
   setInterval(() => pbar.tick(), 500);
 
-  const stats = await npmsum(key);
+  const stats = await npmsum(key, {
+    startDate: argv.startDate,
+    endDate: argv.endDate
+  });
 
   pbar.tick(100);
 

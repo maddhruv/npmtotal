@@ -23,7 +23,11 @@ function npmtotal(key, options) {
   if (!key) {
     throw new Error("`key` is a required filed for `npmtotal`");
   }
-  const { exclude, startDate, endDate } = { ...defaultOptions, ...options };
+  const { exclude, startDate, endDate } = _.mergeWith(
+    {},
+    defaultOptions,
+    options
+  );
 
   let url;
 
