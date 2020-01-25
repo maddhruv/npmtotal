@@ -21,8 +21,14 @@ const npmsum = require("..");
   pbar.update(10);
 
   const stats = await npmsum(key);
+
   pbar.update(100);
 
-  console.log(stats);
   pbar.stop();
+
+  console.table(stats.stats);
+
+  console.log(`Total Downloads: ${stats.sum}`);
+
+  process.exit(0);
 })();
