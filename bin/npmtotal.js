@@ -1,14 +1,14 @@
 #!/usr/bin/env node
-const cliProgress = require("cli-progress");
+const Progressbar = require("progress");
 const { table } = require("table");
 const { argv } = require("yargs").array("packages");
 const npmsum = require("..");
 
 (async () => {
-  const pbar = new cliProgress.SingleBar(
-    {},
-    cliProgress.Presets.shades_classic
-  );
+  const pbar = new Progressbar("Fetching npm downloads for you: :bar", {
+    total: 100,
+    complete: "~"
+  });
 
   const key = argv.author || argv.packages;
 
@@ -17,15 +17,13 @@ const npmsum = require("..");
     process.exit(1);
   }
 
-  pbar.start(100, 0);
+  pbar.tick(1);
 
-  pbar.update(10);
+  setInterval(() => pbar.tick(), 500);
 
   const stats = await npmsum(key);
 
-  pbar.update(100);
-
-  pbar.stop();
+  pbar.tick(100);
 
   console.log(table([["Name", "Downloads"], ...stats.stats]));
 

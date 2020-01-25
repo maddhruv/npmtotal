@@ -27,9 +27,9 @@
   },
   "homepage": "https://github.com/maddhruv/npmtotal#readme",
   "dependencies": {
-    "cli-progress": "^3.5.0",
     "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.17.15",
+    "progress": "^2.0.3",
     "table": "^5.4.6",
     "yargs": "^15.1.0"
   },
