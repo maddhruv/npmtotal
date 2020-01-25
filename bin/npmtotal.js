@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 const cliProgress = require("cli-progress");
+const { table } = require("table");
 const { argv } = require("yargs").array("packages");
 const npmsum = require("..");
 
@@ -26,7 +27,7 @@ const npmsum = require("..");
 
   pbar.stop();
 
-  console.table(stats.stats);
+  console.log(table([["Name", "Downloads"], ...stats.stats]));
 
   console.log(`Total Downloads: ${stats.sum}`);
 

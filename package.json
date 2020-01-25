@@ -30,6 +30,7 @@
     "cli-progress": "^3.5.0",
     "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.17.15",
+    "table": "^5.4.6",
     "yargs": "^15.1.0"
   },
   "devDependencies": {
