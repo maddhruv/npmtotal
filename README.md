@@ -17,11 +17,11 @@ when consuming as a [module](#module)
 
 For npm `author`
 
-> `npx npmtotal author`
+> `npx npmtotal --author authorName`
 
 and for npm `packages`
 
-> `npx npmtotal package1 package2 ...`
+> `npx npmtotal --packages package1 package2 ...`
 
 ### Module
 
@@ -59,6 +59,10 @@ You can pass several options as the second param.
 | `exclude`   | an array of packages to exclude   | []            |
 | `startDate` | start date for counting downloads | _today - 1_   |
 | `endDate`   | end date for counting downloads   | _today_       |
+
+You can also pass `startDate` and `endDate` as options to the CLI
+
+`npx npmtotal --author maddhruv --startDate '2020-01-01' --endDate '2020-01-03'`
 
 ### Related
 
