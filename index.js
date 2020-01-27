@@ -2,6 +2,8 @@ const mergeWith = require("lodash/mergeWith");
 const omit = require("lodash/omit");
 const sumBy = require("lodash/sumBy");
 const sum = require("lodash/sum");
+const reverse = require("lodash/reverse");
+const sortBy = require("lodash/sortBy");
 const fetch = require("isomorphic-fetch");
 
 const startDate = new Date();
@@ -54,6 +56,14 @@ function npmtotal(key, options) {
       for (let [package, downloads] of Object.entries(packages)) {
         stats.push([package, sum(Object.values(downloads))]);
       }
+
+      stats = reverse(
+        sortBy(stats, [
+          function(o) {
+            return o[1];
+          }
+        ])
+      );
 
       resolve({
         stats,
