@@ -1,4 +1,7 @@
-const _ = require("lodash");
+const mergeWith = require("lodash/mergeWith");
+const omit = require("lodash/omit");
+const sumBy = require("lodash/sumBy");
+const sum = require("lodash/sum");
 const fetch = require("isomorphic-fetch");
 
 const startDate = new Date();
@@ -23,7 +26,7 @@ function npmtotal(key, options) {
   if (!key) {
     throw new Error("`key` is a required filed for `npmtotal`");
   }
-  const { exclude, startDate, endDate } = _.mergeWith(
+  const { exclude, startDate, endDate } = mergeWith(
     {},
     defaultOptions,
     options
@@ -46,16 +49,16 @@ function npmtotal(key, options) {
 
       let stats = [];
 
-      const packages = _.omit(data, exclude);
+      const packages = omit(data, exclude);
 
       for (let [package, downloads] of Object.entries(packages)) {
-        stats.push([package, _.sum(Object.values(downloads))]);
+        stats.push([package, sum(Object.values(downloads))]);
       }
 
       resolve({
         stats,
         sum:
-          _.sumBy(stats, function(o) {
+          sumBy(stats, function(o) {
             return o[1];
           }) || 0
       });
