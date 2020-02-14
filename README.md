@@ -1,6 +1,6 @@
 # npmtotal
 
-Find your npm download statistics bu author or packages, can be used as a [CLI](#cli) or [Module](#module)
+Find your npm download statistics by author or packages, can be used as a [CLI](#cli) or [Module](#module)
 
 ## Installation
 
