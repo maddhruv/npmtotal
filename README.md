@@ -54,11 +54,11 @@ The returned object is of this structure.
 
 You can pass several options as the second param.
 
-| Option      | Description                       | Default value |
-| ----------- | --------------------------------- | ------------- |
-| `exclude`   | an array of packages to exclude   | []            |
-| `startDate` | start date for counting downloads | _today - 1_   |
-| `endDate`   | end date for counting downloads   | _today_       |
+| Option      | Description                       | Default value    |
+| ----------- | --------------------------------- | ---------------- |
+| `exclude`   | an array of packages to exclude   | []               |
+| `startDate` | start date for counting downloads | _today - 1 year_ |
+| `endDate`   | end date for counting downloads   | _today_          |
 
 You can also pass `startDate` and `endDate` as options to the CLI
 
